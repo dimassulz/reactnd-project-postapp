@@ -1,13 +1,15 @@
 ![Logo of the project](./public/favicon.png)
 
-# MyReads Project 
-This project is a example React App for add books on categorized shelfs.
+# PostApp - Frontend Project 
+This project is a frontend client for CRUD post and comments using redux with react.
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Technical Features:
 * React architecture
-* Validation with prop-types
+* Redux architecture
 
-### API Server Backend
+## API Server Backend
 
 The frontend client, depends on the backend API service.
 
@@ -23,7 +25,7 @@ npm start
 
 The API server should be available on [http://localhost:3001](http://localhost:3001) by default.
 
-### App Frontend (PostsApp)
+## App Frontend (PostsApp)
 Install dependencies
 ```bash
 npm install or yarn install
@@ -48,7 +50,7 @@ If it runs successfully, you can visit on [http://localhost:3000/](http://localh
 ├── .gitignore # The list of git ignored files
 ├── package.json # npm package manager file. 
 ├── public #
-│   ├── favicon.png # new favicon Leitura picture
+│   ├── favicon.png # new favicon postApp picture
 │   └── index.html # DO NOT MODIFY
 └── src #
     ├── api # Utils files for API REST backend
@@ -58,19 +60,45 @@ If it runs successfully, you can visit on [http://localhost:3000/](http://localh
         └── posts.js #JavaScript backend API methods to work with posts.
     ├── category # Files for categories component
         ├── views #Components of categories.
-            ├── Link.js # Link categories.
-            ├── List.js # List categories.
-            └── Show.js #Show categories.
-        ├── actions.js #Actions categories.
+            ├── Link.js # Link categories Component.
+            ├── List.js # List categories Component.
+            └── Show.js #Show categories Component.
+        ├── actions.js #Actions and dispatches categories.
         ├── reducers.js # Reducers categories.
         └── types.js # Constants Types reducers categories.
-    ├── comment # Files for categories component
-    ├── default # Files for default component
+    ├── comment # Files for comments component
+        ├── views #Components of comments.
+            ├── Edit.js # Edit comments Component.
+            ├── Form.js # Form comments Component.
+            ├── List.js # List comments Component.
+            └── New.js # New comments Component.
+        ├── actions.js #Actions and dispatches comments.
+        ├── reducers.js # Reducers comments.
+        └── types.js # Constants Types reducers comments.
+    ├── default # Files for default Component
+        ├── views #Component of default.
+            └── Show.js #Show default Component.
+        └── actions.js #Actions and dispatches for default Component.
     ├── post # Files for posts component
+        ├── views #Components of posts.
+            ├── Edit.js # Edit posts Component.
+            ├── Form.js # Form posts Component.
+            ├── Link.js # Link posts Component.
+            ├── List.js # List posts Component.
+            ├── Show.js # Show posts Component.
+            └── New.js # New posts Component.
+        ├── actions.js #Actions and dispatches posts.
+        ├── reducers.js # Reducers posts.
+        └── types.js # Constants Types reducers posts.
     ├── sort # Files for sort component
+        ├── views #Components of sort.
+            ├── Control.js # Control sort Component.
+            └── Sorted.js # Sorted sort Component.
+        ├── actions.js #Actions and dispatches sort.
+        └── reducers.js # Reducers sort.
     ├── utils # Utils files
-        ├── img # 
-            ├── user-icon.png # Icon for user
+        ├── img # Image
+            └── user-icon.png # Icon for component user
         ├── Icon # Icon Font Awesome Component 
         ├── index.js # Useful general functions
         └── UserImg.js # User Image Component 
@@ -78,9 +106,4 @@ If it runs successfully, you can visit on [http://localhost:3000/](http://localh
     └── index.js # default injection ReactRouterRedux, Redux, Reducers, ReduxThunk and AppComponent
 ```
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
