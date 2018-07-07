@@ -67,8 +67,9 @@ const CommentForm = ({
                 <i className="material-icons right">send</i>Salvar
               </button>
               <button
-                 type="button"
-                className="waves-effect waves-light btn deep-orange lighten-1"  onClick={cancel}
+                type="button"
+                className="waves-effect waves-light btn deep-orange lighten-1"
+                onClick={cancel}
               >
                 <i className="material-icons left">cancel</i>Cancelar
               </button>

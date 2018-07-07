@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const Icon = ({name}) => (
+const Icon = ({ name }) => (
   <span className="icon">
-    <i className={`fa fa-${name}`}></i>
+    <i className={`fa fa-${name}`} />
   </span>
-)
+);
 
-export default Icon
+export default Icon;

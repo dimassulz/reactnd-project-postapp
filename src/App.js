@@ -10,16 +10,22 @@ import { Row, Col } from "react-materialize";
 
 const App = () => (
   <div className="container">
-      <div className='left-align' style={{position:"fixed", bottom:'1vh', left: '1vw'}}>
-        <Link to="/" className="btn-floating btn-large scale-transition">
-          <i className="material-icons">home</i>
-        </Link>
-      </div>
-      <div className='right-align' style={{position:"fixed", bottom:'1vh', right: '1vw'}}>
-        <Link to="/posts/new" className="btn-floating btn-large scale-transition">
-          <i className="material-icons">add</i>
-        </Link>
-      </div>
+    <div
+      className="left-align"
+      style={{ position: "fixed", bottom: "1vh", left: "1vw" }}
+    >
+      <Link to="/" className="btn-floating btn-large scale-transition">
+        <i className="material-icons">home</i>
+      </Link>
+    </div>
+    <div
+      className="right-align"
+      style={{ position: "fixed", bottom: "1vh", right: "1vw" }}
+    >
+      <Link to="/posts/new" className="btn-floating btn-large scale-transition">
+        <i className="material-icons">add</i>
+      </Link>
+    </div>
     <Row>
       <Col s={12}>
         <Switch>

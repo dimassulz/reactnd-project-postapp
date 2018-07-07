@@ -3,7 +3,9 @@ import typesPost from "../post/types";
 import { CategoriesAPI } from "../api/categories";
 
 export const getAllCategories = () => dispatch => {
-  dispatch({ type: typesCategories.REQUEST_ALL });
+  dispatch({
+    type: typesCategories.REQUEST_ALL
+  });
 
   CategoriesAPI.getAll(categories => {
     dispatch({

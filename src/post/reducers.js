@@ -16,7 +16,6 @@ export const posts = (state = {}, action) => {
         ...state,
         [action.post.id]: action.post
       });
-      console.log(posts);
       return posts.reduce((result, item) => {
         if (!item.deleted) {
           result[item.id] = item;
@@ -25,7 +24,6 @@ export const posts = (state = {}, action) => {
       }, {});
     case postTypes.RECEIVE_BY_CATEGORY:
     case postTypes.RECEIVE_ALL:
-      console.log(action);
       return deleteItem(action.posts);
     default:
       return state;

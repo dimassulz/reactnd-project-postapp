@@ -15,10 +15,9 @@ class Category extends Component {
     return (
       <div>
         <h2>
-        <Link to="/">
-          Home 
-        </Link>
-        &nbsp;<i className=" material-icons">arrow_forward</i> {category}</h2>
+          <Link to="/">Home</Link>
+          &nbsp;<i className=" material-icons">arrow_forward</i> {category}
+        </h2>
         <Sorted list={posts}>{list => <PostList list={list} />}</Sorted>
       </div>
     );

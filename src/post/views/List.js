@@ -8,7 +8,6 @@ import { formatTime } from "../../utils";
 import { UserImg } from "../../utils/UserImg";
 
 const PostList = ({ posts, vote, deletePost }) => (
-  
   <div>
     {posts.length === 0 ? (
       <div className="post">
@@ -17,11 +16,10 @@ const PostList = ({ posts, vote, deletePost }) => (
     ) : (
       posts.map(post => (
         <div className="post" key={post.id}>
-          
           <div className="user-block">
             <UserImg />
             <span className="username">
-            <strong>{post.title} </strong >
+              <strong>{post.title} </strong>
               <Link to={`/posts/${post.id}/edit`} className="link">
                 <Icon name="pencil" />{" "}
               </Link>
@@ -44,7 +42,8 @@ const PostList = ({ posts, vote, deletePost }) => (
               </span>
             </span>
             <span className="description">
-              Publicado por <strong>{post.author}</strong> em {formatTime(post.timestamp)}
+              Publicado por <strong>{post.author}</strong> em{" "}
+              {formatTime(post.timestamp)}
             </span>
           </div>
           <p>{post.body}</p>
@@ -80,8 +79,8 @@ const PostList = ({ posts, vote, deletePost }) => (
             </li>
             <li>
               <Link to={`/${post.category}/${post.id}`}>
-                <Icon name="comments-o" />{" "}
-                {post.commentCount} Veja os Comentários
+                <Icon name="comments-o" /> {post.commentCount} Veja os
+                Comentários
               </Link>
             </li>
           </ul>

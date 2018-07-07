@@ -13,9 +13,7 @@ const CommentList = ({
   deleteComment
 }) => (
   <div>
-    {comments.length > 0 ? (
-    <h4>Comentários</h4>
-    ) : ''}
+    {comments.length > 0 ? <h4>Comentários</h4> : ""}
     <EditComment />
     {comments.map(c => (
       <div className="post" style={{ paddingLeft: "5%" }} key={c.id}>

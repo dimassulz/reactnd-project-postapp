@@ -9,7 +9,7 @@ const List = ({ categories }) => (
         <a className="brand-logo">Home</a>
         <ul className="right">
           {categories.map(category => (
-            <li key={category.path} >
+            <li key={category.path}>
               <Link category={category} />
             </li>
           ))}

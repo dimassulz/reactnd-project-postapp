@@ -1,13 +1,15 @@
 ![Logo of the project](./public/favicon.png)
 
-# PostApp - Frontend Project 
+# PostApp - Frontend Project
+
 This project is a frontend client for CRUD post and comments using redux with react.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Technical Features:
-* React architecture
-* Redux architecture
+
+- React architecture
+- Redux architecture
 
 ## API Server Backend
 
@@ -26,29 +28,34 @@ npm start
 The API server should be available on [http://localhost:3001](http://localhost:3001) by default.
 
 ## App Frontend (PostsApp)
+
 Install dependencies
+
 ```bash
 npm install or yarn install
 ```
+
 Start Project
+
 ```bash
 npm start or yarn start
 ```
+
 If it runs successfully, you can visit on [http://localhost:3000/](http://localhost:3000/).
 
 ## Style
 
-* [AdminLte](https://adminlte.io/themes/AdminLTE/index2.html)
-* [Bootstrap](https://getbootstrap.com/docs/3.3/css/)
-* [FontAwesome Icons](http://fontawesome.io/icons/)
-* [React Materialize](https://react-materialize.github.io)
+- [AdminLte](https://adminlte.io/themes/AdminLTE/index2.html)
+- [Bootstrap](https://getbootstrap.com/docs/3.3/css/)
+- [FontAwesome Icons](http://fontawesome.io/icons/)
+- [React Materialize](https://react-materialize.github.io)
 
 ## Project Organization
 
 ```bash
 ├── README.md - This file.
 ├── .gitignore # The list of git ignored files
-├── package.json # npm package manager file. 
+├── package.json # npm package manager file.
 ├── public #
 │   ├── favicon.png # new favicon postApp picture
 │   └── index.html # DO NOT MODIFY
@@ -99,11 +106,9 @@ If it runs successfully, you can visit on [http://localhost:3000/](http://localh
     ├── utils # Utils files
         ├── img # Image
             └── user-icon.png # Icon for component user
-        ├── Icon # Icon Font Awesome Component 
+        ├── Icon # Icon Font Awesome Component
         ├── index.js # Useful general functions
-        └── UserImg.js # User Image Component 
+        └── UserImg.js # User Image Component
     ├── App.js # App Component Default Core
     └── index.js # default injection ReactRouterRedux, Redux, Reducers, ReduxThunk and AppComponent
 ```
-
-

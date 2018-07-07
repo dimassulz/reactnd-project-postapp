@@ -25,9 +25,7 @@ class PostForm extends Component {
         }}
       >
         <div className="form-group">
-        <label>
-            Categoria
-          </label>
+          <label>Categoria</label>
           <select
             id="post_category"
             name="category"
@@ -45,13 +43,10 @@ class PostForm extends Component {
               </option>
             ))}
           </select>
-          
         </div>
 
         <div className="form-group">
-          <label>
-            Autor
-          </label>
+          <label>Autor</label>
           <input
             type="text"
             id="post_author"
@@ -64,24 +59,20 @@ class PostForm extends Component {
           />
         </div>
         <div className="form-group">
-          <label>
-            Título
-          </label>
-            <input
-              type="text"
-              id="post_title"
-              name="title"
-              placeholder="Digite o título do post"
-              value={title}
-              required
-              className="form-control"
-              onChange={handleChange}
-            />
+          <label>Título</label>
+          <input
+            type="text"
+            id="post_title"
+            name="title"
+            placeholder="Digite o título do post"
+            value={title}
+            required
+            className="form-control"
+            onChange={handleChange}
+          />
         </div>
         <div className="form-group">
-          <label >
-            Post
-          </label>
+          <label>Post</label>
           <div className="control">
             <textarea
               id="post_body"
@@ -97,9 +88,17 @@ class PostForm extends Component {
         </div>
         <div className="form-group">
           <div className="control">
-            <button type="submit" className=" pull-right waves-effect waves-light btn"><i className="material-icons right">send</i>Salvar</button>
-            <Link to="/" className="waves-effect waves-light btn deep-orange lighten-1">
-            <i className="material-icons left">cancel</i>Cancelar
+            <button
+              type="submit"
+              className=" pull-right waves-effect waves-light btn"
+            >
+              <i className="material-icons right">send</i>Salvar
+            </button>
+            <Link
+              to="/"
+              className="waves-effect waves-light btn deep-orange lighten-1"
+            >
+              <i className="material-icons left">cancel</i>Cancelar
             </Link>
           </div>
         </div>

@@ -20,42 +20,42 @@ class Show extends Component {
     const { id, post, comments, vote, deletePost, addComment } = this.props;
     return (
       <div className="post">
-       
-       <h2>
-         
-       <Link to="/">
-          Home 
-        </Link> <i className=" material-icons">arrow_forward</i> <CategoryLink
-                category={{ path: post.category, name: post.category }}
-              /></h2>
-       <hr />
+        <h2>
+          <Link to="/">Home</Link>{" "}
+          <i className=" material-icons">arrow_forward</i>{" "}
+          <CategoryLink
+            category={{ path: post.category, name: post.category }}
+          />
+        </h2>
+        <hr />
         <div className="user-block">
           <UserImg />
           <span className="username">
-          <strong>{post.title}</strong>
-            
+            <strong>{post.title}</strong>
+
             <span className="pull-right btn-box-tool">
-            <Link to={`/posts/${post.id}/edit`} className="link">
-              <Icon name="pencil" />{" "}
-            </Link>
-            <a
-              className="link"
-              onClick={e => {
-                e.preventDefault();
-                if (window.confirm("Deseja realmente deletar esse post?")) {
-                  deletePost(post.id);
-                }
-              }}
-            >
-              <Icon name="trash" />
-            </a>
+              <Link to={`/posts/${post.id}/edit`} className="link">
+                <Icon name="pencil" />{" "}
+              </Link>
+              <a
+                className="link"
+                onClick={e => {
+                  e.preventDefault();
+                  if (window.confirm("Deseja realmente deletar esse post?")) {
+                    deletePost(post.id);
+                  }
+                }}
+              >
+                <Icon name="trash" />
+              </a>
             </span>
           </span>
           <span className="description">
-            Publicado por <strong>{post.author} </strong> em {formatTime(post.timestamp)}
+            Publicado por <strong>{post.author} </strong> em{" "}
+            {formatTime(post.timestamp)}
           </span>
         </div>
-        
+
         <p>{post.body}</p>
         <ul className="list-inline">
           <li>

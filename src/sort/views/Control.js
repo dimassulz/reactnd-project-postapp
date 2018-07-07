@@ -15,7 +15,6 @@ const sortIconName = (option, field) => {
 };
 
 const SortControl = ({ option, changeOption, fields }) => (
-  
   <Row>
     <Col s={1}>Ordernar: </Col>
     {Object.keys(fields).map(key => (
