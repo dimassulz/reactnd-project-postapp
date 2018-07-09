@@ -106,9 +106,7 @@ If it runs successfully, you can visit on [http://localhost:3000/](http://localh
     ├── utils # Utils files
         ├── img # Image
             └── user-icon.png # Icon for component user
-        ├── Icon # Icon Font Awesome Component
-        ├── index.js # Useful general functions
-        └── UserImg.js # User Image Component
+        └── helpers.js # Useful general functions
     ├── App.js # App Component Default Core
     └── index.js # default injection ReactRouterRedux, Redux, Reducers, ReduxThunk and AppComponent
 ```

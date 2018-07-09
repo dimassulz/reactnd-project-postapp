@@ -1,8 +1,8 @@
 import React from "react";
+import { Row, Col } from "react-materialize";
 import { connect } from "react-redux";
 import { Icon } from "../../utils/helpers";
 import { changeOptions } from "../actions";
-import { Row, Col } from "react-materialize";
 
 const sortIconName = (option, field) => {
   if (field !== option.field) {
