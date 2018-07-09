@@ -5,11 +5,10 @@ import { getPost, votePost, deletePost } from "../actions";
 import CategoryLink from "../../category/views/Link";
 import Sorted from "../../sort/views/Sorted";
 import CommentList from "../../comment/views/List";
-import Icon from "../../utils/Icon";
-import { formatTime } from "../../utils";
+import { Icon, UserImg} from "../../utils/helpers";
+import { formatTime } from "../../utils/helpers";
 import { getCommentsByPost, openNewCommentForm } from "../../comment/actions";
 import NewComment from "../../comment/views/New";
-import { UserImg } from "../../utils/UserImg";
 
 class Show extends Component {
   componentDidMount() {

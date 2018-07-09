@@ -2,10 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import CategoryLink from "../../category/views/Link";
-import Icon from "../../utils/Icon";
+import { Icon, UserImg } from "../../utils/helpers";
 import { votePost, deletePost } from "../actions";
-import { formatTime } from "../../utils";
-import { UserImg } from "../../utils/UserImg";
+import { formatTime } from "../../utils/helpers";
 
 const PostList = ({ posts, vote, deletePost }) => (
   <div>

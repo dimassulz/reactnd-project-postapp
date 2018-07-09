@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Icon from "../../utils/Icon";
+import {Icon} from "../../utils/helpers";
 import { changeCommentFormInput, closeCommentForm } from "../actions";
 
 const CommentForm = ({

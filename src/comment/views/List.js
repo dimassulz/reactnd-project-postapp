@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { voteComment, openEditCommentForm, deleteComment } from "../actions";
-import { formatTime } from "../../utils";
-import Icon from "../../utils/Icon";
+import { formatTime } from "../../utils/helpers";
+import { Icon, UserImg } from "../../utils/helpers";
 import EditComment from "./Edit";
-import { UserImg } from "../../utils/UserImg";
 
 const CommentList = ({
   comments,

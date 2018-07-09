@@ -1,6 +1,6 @@
 import { PostsAPI } from "../api/posts";
 import { push } from "react-router-redux";
-import { newId, newDate } from "../utils";
+import { newId, newDate } from "../utils/helpers";
 import typesPost from "./types";
 
 export const getAllPosts = () => dispatch => {

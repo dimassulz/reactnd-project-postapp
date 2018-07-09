@@ -1,6 +1,6 @@
 import commentsTypes from "./types";
 import { CommentsAPI } from "../api/comments";
-import { newId, newDate } from "../utils";
+import { newId, newDate } from "../utils/helpers";
 
 export const getCommentsByPost = postId => dispatch => {
   dispatch({

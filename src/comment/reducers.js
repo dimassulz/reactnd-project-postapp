@@ -1,5 +1,5 @@
 import commentsTypes from "./types";
-import { deleteItem } from "../utils";
+import { deleteItem } from "../utils/helpers";
 
 export const comments = (state = {}, action) => {
   switch (action.type) {
