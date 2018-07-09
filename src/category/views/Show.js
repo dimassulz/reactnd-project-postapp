@@ -1,32 +1,33 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getPostsByCategory } from "../actions";
+import CategoryList from "../../category/views/List";
 import Sorted from "../../sort/views/Sorted";
 import PostList from "../../post/views/List";
-import { Link } from "react-router-dom";
+import { Nav } from "../../utils/helpers";
 
 class Category extends Component {
   componentDidMount() {
     this.props.initialize();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.category !== this.props.category) {
+      this.props = newProps;
+      this.props.initialize();
+    }
+  }
+
   render() {
-    const { category, posts } = this.props;
-    return (
-      <div>
-        <h2>
-          <Link to="/">Home</Link>
-          &nbsp;<i className=" material-icons">arrow_forward</i> {category}
-        </h2>
-        <Sorted list={posts}>{list => <PostList list={list} />}</Sorted>
-      </div>
-    );
+    const { category, posts, categories } = this.props;
+    return <Nav categories={categories} posts={posts} category={category} />;
   }
 }
 
-const mapStateToProps = ({ posts }, { match }) => ({
+const mapStateToProps = ({ posts, categories }, { match }) => ({
   category: match.params.category,
-  posts: Object.values(posts)
+  posts: Object.values(posts),
+  categories: Object.values(categories)
 });
 
 const mapDispatchToProps = (dispatch, { match }) => ({

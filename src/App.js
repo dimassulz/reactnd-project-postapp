@@ -5,6 +5,8 @@ import Category from "./category/views/Show";
 import Post from "./post/views/Show";
 import NewPost from "./post/views/New";
 import EditPost from "./post/views/Edit";
+import NotFound from "./notfound/views/Show";
+
 
 import { Row, Col } from "react-materialize";
 
@@ -34,6 +36,7 @@ const App = () => (
           <Route exact path="/posts/:id/edit" component={EditPost} />
           <Route exact path="/:category" component={Category} />
           <Route exact path="/:category/:post_id" component={Post} />
+          {/* <Route component={NotFound}/> */}
         </Switch>
       </Col>
     </Row>

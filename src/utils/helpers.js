@@ -1,7 +1,10 @@
 import cuid from "cuid";
-import React from 'react'
+import React from "react";
 import Moment from "react-moment";
 import img from "./img/user-icon.png";
+import CategoryList from "../category/views/List";
+import Sorted from "../sort/views/Sorted";
+import PostList from "../post/views/List";
 
 Moment.globalLocale = "pt-br";
 Moment.globalFormat = ` HH:mm:ss \\d\\e DD/MM/YYYY`;
@@ -28,4 +31,12 @@ export const Icon = ({ name }) => (
 
 export const UserImg = () => (
   <img className="img-circle img-bordered-sm" src={img} alt="Img User" />
+);
+
+export const Nav = ({categories, posts, category = ''}) => (
+  <div>
+    <CategoryList categories={categories} categoryActive={category} />
+    <br />
+    <Sorted list={posts}>{list => <PostList list={list} />}</Sorted>
+  </div>
 );

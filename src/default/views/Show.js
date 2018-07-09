@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import CategoryList from "../../category/views/List";
-import PostList from "../../post/views/List";
 import { loadDefault } from "../actions";
-import Sorted from "../../sort/views/Sorted";
+
+import { Nav } from "../../utils/helpers";
 
 class Default extends Component {
   componentDidMount() {
@@ -12,17 +11,9 @@ class Default extends Component {
 
   render() {
     const { categories, posts } = this.props;
-    return (
-      <div>
-        <div>
-          <CategoryList categories={categories} />
-          <br />
-          <Sorted list={posts}>{list => <PostList list={list} />}</Sorted>
-        </div>
-      </div>
-    );
+    return <Nav categories={categories} posts={posts} />;
   }
-}
+};
 
 const mapStateToProps = ({ categories, posts }) => ({
   categories: Object.values(categories),
