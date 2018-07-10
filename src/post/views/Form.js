@@ -95,7 +95,7 @@ class PostForm extends Component {
               <i className="material-icons right">send</i>Salvar
             </button>
             <Link
-              to="/"
+              to={`/${post.category}`}
               className="waves-effect waves-light btn deep-orange lighten-1"
             >
               <i className="material-icons left">cancel</i>Cancelar

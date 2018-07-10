@@ -35,7 +35,7 @@ export const getPost = id => dispatch => {
         type: typesPost.REQUEST_ERROR,
         msg: post
       });
-      dispatch(push("/"));
+      dispatch(push("/404"));
     }
   });
 };

@@ -9,7 +9,6 @@ import NotFound from "./notfound/views/Show";
 
 
 import { Row, Col } from "react-materialize";
-
 const App = () => (
   <div className="container">
     <div
@@ -36,7 +35,7 @@ const App = () => (
           <Route exact path="/posts/:id/edit" component={EditPost} />
           <Route exact path="/:category" component={Category} />
           <Route exact path="/:category/:post_id" component={Post} />
-          {/* <Route component={NotFound}/> */}
+          <Route exact path="/404" component={NotFound} />/>
         </Switch>
       </Col>
     </Row>

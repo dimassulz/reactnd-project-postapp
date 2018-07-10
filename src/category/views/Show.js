@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getPostsByCategory } from "../actions";
-import CategoryList from "../../category/views/List";
-import Sorted from "../../sort/views/Sorted";
-import PostList from "../../post/views/List";
 import { Nav } from "../../utils/helpers";
 
 class Category extends Component {

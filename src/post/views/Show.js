@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPost, votePost, deletePost } from "../actions";
-import CategoryLink from "../../category/views/Link";
 import Sorted from "../../sort/views/Sorted";
 import CommentList from "../../comment/views/List";
-import { Icon, UserImg} from "../../utils/helpers";
+import { Icon, UserImg } from "../../utils/helpers";
+import CategoryList from "../../category/views/List";
 import { formatTime } from "../../utils/helpers";
 import { getCommentsByPost, openNewCommentForm } from "../../comment/actions";
 import NewComment from "../../comment/views/New";
@@ -16,17 +16,22 @@ class Show extends Component {
   }
 
   render() {
-    const { id, post, comments, vote, deletePost, addComment } = this.props;
+    const {
+      id,
+      post,
+      comments,
+      vote,
+      deletePost,
+      addComment,
+      categories,
+      match
+    } = this.props;
     return (
       <div className="post">
-        <h2>
-          <Link to="/">Home</Link>{" "}
-          <i className=" material-icons">arrow_forward</i>{" "}
-          <CategoryLink
-            category={{ path: post.category, name: post.category }}
-          />
-        </h2>
-        <hr />
+        <CategoryList
+          categories={categories}
+          categoryActive={match.params.category}
+        />
         <div className="user-block">
           <UserImg />
           <span className="username">
@@ -109,12 +114,13 @@ class Show extends Component {
   }
 }
 
-const mapStateToProps = ({ posts, comments }, { match }) => {
+const mapStateToProps = ({ posts, comments, categories }, { match }) => {
   const id = match.params.post_id;
   return {
     id,
     post: posts[id] || {},
-    comments: Object.values(comments)
+    comments: Object.values(comments),
+    categories: Object.values(categories)
   };
 };
 

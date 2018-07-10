@@ -36,7 +36,6 @@ export const UserImg = () => (
 export const Nav = ({categories, posts, category = ''}) => (
   <div>
     <CategoryList categories={categories} categoryActive={category} />
-    <br />
     <Sorted list={posts}>{list => <PostList list={list} />}</Sorted>
   </div>
 );

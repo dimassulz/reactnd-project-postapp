@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loadNotFound } from "../actions";
-import { Nav } from "../../utils/helpers";
+import CategoryList from "../../category/views/List";
 
 class NotFound extends Component {
   componentDidMount() {
@@ -10,7 +10,8 @@ class NotFound extends Component {
 
   render() {
     const { categories } = this.props;
-    return (<div><Nav categories={categories} />asdfasdasfafasfd</div>);
+    console.log('WSFASADSF');
+    return (<div> asdfasdfasfdas aaskdfj çalksj dfçlkaj dslkfjlasd</div>);
   }
 };
 
