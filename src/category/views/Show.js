@@ -16,7 +16,7 @@ class Category extends Component {
   }
 
   render() {
-    const { category, posts, categories } = this.props;
+    const { category, posts, categories } = this.props;  
     return <Nav categories={categories} posts={posts} category={category} />;
   }
 }

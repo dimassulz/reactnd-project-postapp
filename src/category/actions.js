@@ -28,7 +28,7 @@ const receivePostsByCategory = (category, posts) => ({
 
 export const getPostsByCategory = category => dispatch => {
   dispatch(requestPostsByCategory(category));
-
+  
   CategoriesAPI.getPosts(category, posts => {
     dispatch(receivePostsByCategory(category, posts));
   });

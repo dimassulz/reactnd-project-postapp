@@ -10,10 +10,14 @@ class NotFound extends Component {
 
   render() {
     const { categories } = this.props;
-    console.log('WSFASADSF');
-    return (<div> asdfasdfasfdas aaskdfj çalksj dfçlkaj dslkfjlasd</div>);
+    return (
+      <div>
+        <CategoryList categories={categories} categoryActive={''} />
+        <h2 className="center"> Erro 404 - Página não encontrada!</h2>
+      </div>
+    );
   }
-};
+}
 
 const mapStateToProps = ({ categories }) => ({
   categories: Object.values(categories)
